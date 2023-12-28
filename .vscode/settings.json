@@ -3,6 +3,7 @@
     "java.project.outputPath": "bin",
     "workbench.iconTheme": "vscode-icons",
     "editor.tabSize": 2,
+    "editor.fontSize": 15,
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ]
