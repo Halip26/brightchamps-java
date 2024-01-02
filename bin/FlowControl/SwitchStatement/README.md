@@ -1,0 +1,3 @@
+# Switch Explanation
+
+In the Java programming language, a switch is a statement used to select a block of code to be executed based on the value of a variable or expression. The switch statement starts with the switch keyword followed by the variable or expression to be compared with the values given in the case. If the value of the variable or expression is equal to one of the values in the case, then the block of code following the case will be executed. If the value of the variable or expression is not equal to any of the values in the case, then the code block that follows the default will be executed.
