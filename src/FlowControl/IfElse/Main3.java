@@ -1,12 +1,13 @@
-package FlowControl_IfElse;
+package FlowControl.IfElse;
 
 import java.util.Scanner;
 
-public class IfElse3 {
+public class Main3 {
   public static void main(String[] args) {
+    // this program to check out negative & positive integer
     Scanner scanner = new Scanner(System.in);
 
-    System.out.print("Enter an integer: ");
+    System.out.println("Enter an integer: ");
     int number = scanner.nextInt();
 
     if (number > 0) {
@@ -19,4 +20,5 @@ public class IfElse3 {
 
     scanner.close();
   }
+
 }

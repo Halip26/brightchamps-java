@@ -1,4 +1,4 @@
-package FlowControl_IfElse;
+package FlowControl.IfElse;
 
 import java.util.Scanner;
 
