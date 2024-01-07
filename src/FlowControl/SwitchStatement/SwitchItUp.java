@@ -31,9 +31,9 @@ public class SwitchItUp {
 
       // First case for finding the addition
       case 1:
-        System.out.println("Enter the first number ");
+        System.out.println("Enter the first number: ");
         first_operand = scanner.nextFloat();
-        System.out.println("Enter the second number");
+        System.out.println("Enter the second number: ");
         second_operand = scanner.nextFloat();
         result = first_operand + second_operand;
         System.out.println("The sum of the numbers is = " + result + "\n");
@@ -41,9 +41,9 @@ public class SwitchItUp {
 
       // Second case for finding the difference
       case 2:
-        System.out.println("Enter the first number ");
+        System.out.println("Enter the first number: ");
         first_operand = scanner.nextFloat();
-        System.out.println("Enter the second number");
+        System.out.println("Enter the second number: ");
         second_operand = scanner.nextFloat();
         result = first_operand - second_operand;
         System.out.println("The difference of the numbers is = " + result + "\n");
@@ -51,9 +51,9 @@ public class SwitchItUp {
 
       // Third case for finding the product
       case 3:
-        System.out.println("Enter the first number");
+        System.out.println("Enter the first number: ");
         first_operand = scanner.nextFloat();
-        System.out.println("Enter the second number");
+        System.out.println("Enter the second number: ");
         second_operand = scanner.nextFloat();
         result = first_operand * second_operand;
         System.out.println("The product of the numbers is = " + result + "\n");
@@ -61,9 +61,9 @@ public class SwitchItUp {
 
       // Fourth case for finding the quotient
       case 4:
-        System.out.println("Enter the first number");
+        System.out.println("Enter the first number: ");
         first_operand = scanner.nextFloat();
-        System.out.println("Enter the second number");
+        System.out.println("Enter the second number: ");
         second_operand = scanner.nextFloat();
         result = first_operand / second_operand;
         System.out.println("The quotient is = " + result + "\n");
