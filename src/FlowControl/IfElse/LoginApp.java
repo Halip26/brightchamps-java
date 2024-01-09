@@ -10,15 +10,37 @@ public class LoginApp {
 
     while (true) {
       System.out.println(" ");
+      // time sleep 1 second
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+      // ask user to input username
       System.out.print("Enter your username: ");
       String usernameInput = scanner.next();
+      // time sleep 1 second
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+      // ask user to input password
       System.out.print("Enter your password: ");
       String passwordInput = scanner.next();
+      // time sleep 1 second
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+      // ask user to input confirm password
       System.out.print("Enter your password again: ");
       String confirmPassword = scanner.next();
       System.out.println("----------------------------------------");
 
       if (username.equals(usernameInput) && password.equals(passwordInput) && confirmPassword.equals(passwordInput)) {
+        // time sleep 1 second
         try {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -28,6 +50,7 @@ public class LoginApp {
         break;
       } else if (!username.equals(usernameInput) && password.equals(passwordInput)
           && confirmPassword.equals(passwordInput)) {
+        // time sleep 1 second
         try {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
