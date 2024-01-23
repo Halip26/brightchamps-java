@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Scanner;
 
-public class AverageCalcualor {
+public class AverageCalcuator {
   private static Scanner scan;
 
   public static void main(String[] args) {
