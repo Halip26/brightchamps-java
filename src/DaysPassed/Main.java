@@ -16,10 +16,14 @@ public class Main {
 
     Date birthDate = getBirthDate();
 
+    // Format tanggal kelahiran
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
+    String formattedBirthDate = dateFormat.format(birthDate);
+
     int daysPassed = calculateDays(birthDate);
 
     System.out.println("-----------------------------------");
-    System.out.printf("Kamu telah hidup selama %d days, %s%n", daysPassed, name);
+    System.out.printf("Kamu lahir pada '%s' & telah hidup selama %d days, %s%n", formattedBirthDate, daysPassed, name);
 
   }
 
