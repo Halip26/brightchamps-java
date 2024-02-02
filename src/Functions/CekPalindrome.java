@@ -7,7 +7,7 @@ public class CekPalindrome {
 
   public static boolean isPalindrome(String word) {
     // Remove spaces and convert letters to lowercase
-    String cleanWord = word.toUpperCase().replace(" ", "");
+    String cleanWord = word.toLowerCase().replace(" ", "");
 
     // Comparing words with their opposites
     return cleanWord.equals(new StringBuilder(cleanWord).reverse().toString());
@@ -21,7 +21,7 @@ public class CekPalindrome {
       System.out.print("Enter the word ('q' to exit): ");
       String inputWord = UserInput.nextLine();
 
-      if (inputWord.equals("q")) {
+      if (inputWord.toLowerCase().equals("q")) {
         System.out.println("You quit the programme");
         break;
       }
