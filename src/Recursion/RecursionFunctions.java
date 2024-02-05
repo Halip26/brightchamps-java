@@ -19,7 +19,7 @@ public class RecursionFunctions {
     if (n <= 1) {
       return 1;
     } else {
-      return factorial(n - 1) + fibanocci(n - 2);
+      return fibanocci(n - 1) + fibanocci(n - 2);
     }
   }
 
@@ -43,13 +43,13 @@ public class RecursionFunctions {
     System.out.println("Factorial of " + factorialInput + " is " + factorialResult);
 
     // Input for Fibanocci sequence
-    System.out.println("Enter the number of terms for fibonacci series: ");
+    System.out.print("Enter the number of terms for fibonacci series: ");
     int fibanoccilInput = scanner.nextInt();
     int fibanocciResult = fibanocci(fibanoccilInput);
     System.out.println("Sum of Fibanocci series up to " + fibanoccilInput + " is " + fibanocciResult);
 
     // Input for the number digits
-    System.out.println("Enter the number of terms for fibonacci series: ");
+    System.out.print("Enter the number of terms for fibonacci series: ");
     int sumDigitsInput = scanner.nextInt();
     int sumDigitsResult = sumDigits(sumDigitsInput);
     System.out.println("Sum of digits of " + sumDigitsInput + " is " + sumDigitsResult);
