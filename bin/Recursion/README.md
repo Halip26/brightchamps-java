@@ -16,7 +16,7 @@ Recursion is a concept in programming where a function calls itself. In the Java
 
 Factorial:
 
-``java
+```java
 Copy code
 public static int factorial(int n) {
     if (n <= 1) {
@@ -31,7 +31,7 @@ public static int factorial(int n) {
 - This function calculates the factorial of a number by utilising the recursive property.
   Fibonacci sequence:
 
-``java
+```java
 Copy code
 public static int fibonacci(int n) {
     if (n <= 1) {
@@ -40,12 +40,13 @@ public static int fibonacci(int n) {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
+
 ```
 
 - This function generates values in the Fibonacci sequence using recursion.
 Digit Summation:
 
-``java
+```java
 Copy code
 public static int sumDigits(int n) {
     if (n == 0) {
@@ -89,4 +90,11 @@ public static int sumDigits(int n) {
 
 Recursion is a powerful tool in programming to handle problems that can be solved in a structured way. A good understanding of base conditions and recursion steps is essential to prevent recursion failures and maintain programme efficiency.
 
-*** Translated with www.DeepL.com/Translator (free version) ***
+## Public static vs Private static
+
+1. Public static
+   - public: The method or variable can be accessed from anywhere, either from the class itself, from a class in the same package, or from a class in another package.
+   - static: The method or variable is associated with the class, not with an object instance. This means that you can call a method or access a variable without creating an object of the class.
+2 Private static
+   - private: A method or variable can only be accessed from within the class itself. It cannot be accessed from other classes, even if the other classes are in the same package.
+   - static: The method or variable is associated with the class, not with an object instance. This means that you can call a method or access a variable without creating an object of the class.
