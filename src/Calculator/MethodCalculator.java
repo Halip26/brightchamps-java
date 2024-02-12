@@ -1,6 +1,6 @@
-package Recursion;
+package Calculator;
 
-public class MethodCalculatorRecursion {
+public class MethodCalculator {
   public int addition(int a, int b) {
     return a + b;
   }

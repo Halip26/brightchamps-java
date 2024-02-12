@@ -1,4 +1,4 @@
-package Recursion;
+package Calculator;
 
 import java.util.Scanner;
 
@@ -56,7 +56,7 @@ public class Calculator {
 
     public static void performOperation(int a, int b, String operation) {
         int result = 0;
-        MethodCalculatorRecursion reference = new MethodCalculatorRecursion();
+        MethodCalculator reference = new MethodCalculator();
 
         switch (operation) {
             case "addition":
