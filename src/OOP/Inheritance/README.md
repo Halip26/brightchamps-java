@@ -66,4 +66,84 @@ Dalam contoh ini, `Dog` adalah subkelas yang mewarisi sifat dan metode dari kela
 
 Pewarisan adalah konsep yang penting dalam pemrograman berorientasi objek yang memungkinkan penggunaan kembali kode dan membangun struktur kelas yang terorganisir. Dalam Java, pewarisan memungkinkan pembentukan hierarki kelas yang kompleks dan pengembangan aplikasi yang skalabel.
 
-Dengan pemahaman yang baik tentang konsep pewarisan, subkelas, dan superkelas, serta jenis-jenis pewarisan yang ada, Anda dapat merancang dan mengimplementasikan struktur kelas yang efektif dan mudah di-maintain.
+Dengan pemahaman yang baik tentang konsep pewarisan, subkelas, dan superkelas, serta jenis-jenis pewarisan yang ada, Anda dapat merancang dan mengimplementasikan struktur kelas yang efektif dan mudah di-maintain
+
+---
+
+## **Materi: Pewarisan dalam Pemrograman Berorientasi Objek (OOP) dengan Java**
+
+### **Implementasi Pewarisan dalam Java**
+
+Pada contoh kode yang diberikan, kita memiliki tiga kelas: `EmployOffice`, `Teaching`, dan `NonTeaching`.
+
+1. **Kelas EmployOffice**:
+   - Kelas ini berperan sebagai kelas induk atau superclass.
+   - Memiliki atribut seperti `empNo`, `empName`, `salary`, dan `designation`.
+   - Memiliki konstruktor untuk menginisialisasi atribut.
+   - Memiliki metode `displayData()` untuk menampilkan data karyawan.
+
+2. **Kelas Teaching dan NonTeaching**:
+   - Keduanya merupakan subclass dari `EmployOffice`, sehingga mewarisi atribut dan metode dari kelas tersebut.
+   - Kedua kelas ini memiliki konstruktor yang memanggil konstruktor superclass untuk inisialisasi.
+   - Tidak ada metode khusus yang ditambahkan di subclass, karena keduanya hanya menggunakan metode yang diwarisi dari superclass.
+
+### Contoh Implementasi
+
+```java
+// Kelas EmployOffice
+class EmployOffice {
+    int empNo;
+    String empName;
+    int salary;
+    String designation;
+
+    // Konstruktor
+    public EmployOffice(int empNo, String empName, int salary, String designation) {
+        this.empNo = empNo;
+        this.empName = empName;
+        this.salary = salary;
+        this.designation = designation;
+    }
+
+    // Metode untuk menampilkan data
+    void displayData() {
+        System.out.println("Employ name => " + empName + "\t\tEmploy number => " + empNo);
+        System.out.println("Salary => " + salary + "\t\tDesignation => " + designation);
+    }
+}
+
+// Subkelas Teaching
+class Teaching extends EmployOffice {
+    // Konstruktor
+    public Teaching(int empNo, String empName, int salary, String designation) {
+        super(empNo, empName, salary, designation);
+    }
+}
+
+// Subkelas NonTeaching
+class NonTeaching extends EmployOffice {
+    // Konstruktor
+    public NonTeaching(int empNo, String empName, int salary, String designation) {
+        super(empNo, empName, salary, designation);
+    }
+}
+
+// Kelas utama
+public class Main {
+    public static void main(String[] args) {
+        // Membuat objek dari subkelas Teaching
+        Teaching t1 = new Teaching(101, "John Doe", 50000, "Professor");
+        // Menampilkan data karyawan
+        t1.displayData();
+
+        // Membuat objek dari subkelas NonTeaching
+        NonTeaching nt1 = new NonTeaching(201, "Jane Smith", 40000, "Clerk");
+        // Menampilkan data karyawan
+        nt1.displayData();
+    }
+}
+```
+
+### Kesimpulan
+
+Dengan menggunakan pewarisan, kita dapat mengatur kelas-kelas dalam hierarki yang terstruktur dan mempromosikan penggunaan kembali kode. Dalam Java, konsep pewarisan diimplementasikan dengan menggunakan kata kunci `extends` untuk menunjukkan bahwa sebuah kelas adalah subclass dari kelas lainnya. Dengan memahami konsep pewarisan, Anda dapat merancang struktur kelas yang lebih fleksibel dan mudah dipelihara dalam aplikasi Java Anda.
