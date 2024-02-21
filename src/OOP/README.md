@@ -12,13 +12,13 @@ Pemrograman Berorientasi Objek (OOP) adalah paradigma pemrograman yang berfokus 
     - Kelas adalah blueprint atau cetakan untuk membuat objek.
     - Objek adalah instance dari kelas yang memiliki atribut (variabel) dan perilaku (metode).
 
-2. **Enkapsulasi**:
-    - Enkapsulasi adalah konsep menyembunyikan detail implementasi dan hanya mengekspos fungsionalitas yang diperlukan.
-    - Ini dilakukan dengan menggunakan modifier akses (public, private, protected) untuk mengontrol akses ke variabel dan metode.
-
-3. **Pewarisan**:
+2. **Pewarisan**:
     - Pewarisan memungkinkan kelas baru (subclass) untuk mewarisi sifat dan perilaku dari kelas yang sudah ada (superclass).
     - Ini memungkinkan untuk hierarki kelas dan penggunaan kembali kode.
+
+3. **Enkapsulasi**:
+    - Enkapsulasi adalah konsep menyembunyikan detail implementasi dan hanya mengekspos fungsionalitas yang diperlukan.
+    - Ini dilakukan dengan menggunakan modifier akses (public, private, protected) untuk mengontrol akses ke variabel dan metode.
 
 4. **Polimorfisme**:
     - Polimorfisme memungkinkan objek dari kelas yang berbeda untuk merespons dengan cara yang berbeda terhadap panggilan metode yang sama.
