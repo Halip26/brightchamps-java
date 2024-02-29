@@ -31,7 +31,7 @@ Pada contoh di atas, kita memiliki dua metode `add`, satu untuk menjumlahkan bil
 
 Pengikatan dinamis terjadi pada saat runtime dan terkait dengan konsep overriding metode. Overriding metode memungkinkan subclass untuk memberikan implementasi yang berbeda dari metode yang sudah didefinisikan dalam superclass.
 
-## **Contoh Penimpaan Metode:**
+## **Contoh Overriding Metode:**
 
 ```java
 class Animal {
@@ -51,7 +51,7 @@ Pada contoh di atas, kita memiliki metode `sound` yang dioverride oleh kelas `Do
 
 ## **Studi Perbandingan**
 
-## **Overloading Metode vs. Penimpaan Metode**
+## **Overloading Metode vs. Overriding Metode**
 
 1. **Overloading Metode**:
    - Terjadi dalam satu kelas.
@@ -59,7 +59,7 @@ Pada contoh di atas, kita memiliki metode `sound` yang dioverride oleh kelas `Do
    - Pengikatan statis (compile-time).
    - Digunakan ketika perilaku metode berbeda tergantung pada jenis argumen.
 
-2. **Penimpaan Metode**:
+2. **Overriding Metode**:
    - Terjadi antara superclass dan subclass.
    - Nama metode dan parameter yang sama.
    - Pengikatan dinamis (runtime).

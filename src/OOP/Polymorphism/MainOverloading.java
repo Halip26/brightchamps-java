@@ -19,7 +19,7 @@ class Shapes {
 
 }
 
-public class Main {
+public class MainOverloading {
   public static void main(String[] args) {
     Shapes myShape = new Shapes(); // Create a Shapes object
 
