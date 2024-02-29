@@ -56,10 +56,12 @@ public class TemperatureConverterMain {
     scanner = new Scanner(System.in);
 
     System.out.println("Welcome to the temperature converter");
+
     // Create lines
     for (int i = 0; i <= 35; i++) {
-
+      System.out.print("-");
     }
+    System.out.println();
 
     System.out.println("1. Celsius to Fahrenheit");
     System.out.println("2. Fahrenheit to Celsius");
@@ -68,6 +70,12 @@ public class TemperatureConverterMain {
     System.out.println("5. Kelvin to Celsius");
     System.out.println("6. Celsius to Kelvin");
     System.out.println("7. Quit/Exit");
+
+    // Create lines
+    for (int i = 0; i <= 35; i++) {
+      System.out.print("-");
+    }
+    System.out.println();
 
     System.out.print("Enter your choice: ");
     int choice = scanner.nextInt();

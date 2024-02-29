@@ -30,7 +30,8 @@ public class BMIcalculator {
 
       calculateBMI BMI = new calculateBMI();
 
-      double bmi = BMI.calculateBMIinCm(weight, height); // Call the appropriate calculateBMIinCm method
+      // Call the appropriate calculateBMIinCm method
+      double bmi = BMI.calculateBMIinCm(weight, height);
 
       if (bmi < 15.0) {
         System.out.println("BMI Anda sangat kurus");
