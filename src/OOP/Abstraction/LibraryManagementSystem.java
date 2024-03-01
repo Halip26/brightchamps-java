@@ -6,8 +6,10 @@ import java.util.Scanner;
 
 // Kelas abstrak untuk mewakili item dalam perpustakaan
 abstract class LibraryItem {
+  // four access modifiers in Java are public, protected, default, and private
   protected String title;
   protected String author;
+  // The title and author variables have protected accessibility.
 
   // Konstruktor
   public LibraryItem(String title, String author) {
