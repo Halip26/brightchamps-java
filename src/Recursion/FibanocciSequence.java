@@ -2,7 +2,7 @@ package Recursion;
 
 import java.util.Scanner;
 
-public class RecursionFunctions {
+public class FibanocciSequence {
   private static Scanner scanner;
 
   // function to count factorial
