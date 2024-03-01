@@ -68,4 +68,4 @@ Konsep abstraksi dan penyembunyian data sangat penting dalam pengembangan aplika
 
 ---
 
-## **Penggunaan Abstraksi dalam Java**
+## **Implementasi Penggunaan Abstraksi dalam Java**
