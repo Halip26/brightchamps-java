@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 // Kelas abstrak untuk mewakili anggota sekolah
 abstract class SchoolMember {
+  // protected is access modifier
   protected String name;
 
   // Konstruktor
@@ -76,12 +77,15 @@ class SchoolManager {
 }
 
 public class SchoolManagementSystem {
+  private static Scanner scanner;
+
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    scanner = new Scanner(System.in);
     SchoolManager school = new SchoolManager();
 
     // Menambahkan contoh anggota sekolah
     school.addMember(new Student("John", 10));
+    school.addMember(new Student("Halip", 12));
     school.addMember(new Teacher("Jane", "Mathematics"));
 
     // Menampilkan menu
@@ -104,6 +108,5 @@ public class SchoolManagementSystem {
         System.out.println("Invalid choice");
     }
 
-    scanner.close();
   }
 }
