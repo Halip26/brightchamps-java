@@ -45,6 +45,7 @@ public class Chocolate {
       }
 
     }
+
     // catch block
     catch (OutofStockException ex) {
       // prints message passed to the super constructor

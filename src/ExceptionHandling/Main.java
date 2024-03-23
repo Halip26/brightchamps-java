@@ -1,6 +1,8 @@
 package ExceptionHandling;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 class Barang {
     private String nama;
@@ -62,26 +64,70 @@ class Inventaris {
 }
 
 public class Main {
+    private static Scanner scanner;
+
     public static void main(String[] args) {
+        scanner = new Scanner(System.in);
         Inventaris inventaris = new Inventaris();
 
-        try {
-            inventaris.tambahBarang(new Barang("Buku", 10));
-            inventaris.tambahBarang(new Barang("Pensil", 20));
-            inventaris.tambahBarang(new Barang("Buku", 5)); // Penambahan barang yang sudah ada
-        } catch (IllegalArgumentException e) {
-            System.out.println("Gagal menambahkan barang: " + e.getMessage());
-        }
+        int pilihan;
 
-        inventaris.cetakDaftarBarang();
+        do {
+            System.out.println("\nMenu Inventaris:");
+            System.out.println("1. Tambah Barang");
+            System.out.println("2. Hapus Barang");
+            System.out.println("3. Cetak Daftar Barang");
+            System.out.println("4. Keluar");
+            System.out.print("Masukkan pilihan Anda (1-4): ");
 
-        try {
-            inventaris.hapusBarang("Pensil");
-            inventaris.hapusBarang("Penghapus"); // Penghapusan barang yang tidak ditemukan
-        } catch (IllegalArgumentException e) {
-            System.out.println("Gagal menghapus barang: " + e.getMessage());
-        }
+            // Handle potential input mismatch exception (user enters non-integer)
+            try {
+                pilihan = scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Input tidak valid. Silakan masukkan angka (1-4).");
+                scanner.nextLine(); // Clear the scanner buffer after invalid input
+                pilihan = -1; // Set pilihan to invalid value to avoid processing
+            }
 
-        inventaris.cetakDaftarBarang();
+            scanner.nextLine(); // Consume the newline character after nextInt()
+
+            switch (pilihan) {
+                case 1:
+                    System.out.println("Masukkan nama barang: ");
+                    String name = scanner.nextLine();
+
+                    System.out.println("Masukkan jumlah barang: ");
+                    int jumlah = scanner.nextInt();
+
+                    Barang barang = new Barang(name, jumlah);
+
+                    try {
+                        inventaris.tambahBarang(barang);
+                        System.out.println("Barang berhasil ditambahkan.");
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Gagal menambahkan barang: " + e.getMessage());
+                    }
+                    break;
+                case 2:
+                    System.out.println("Masukkan nama barang yang ingin dihapus: ");
+                    String namaBarang = scanner.nextLine();
+
+                    try {
+                        inventaris.hapusBarang(namaBarang);
+                        System.out.println("Barang berhasil dihapus.");
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Gagal menghapus barang: " + e.getMessage());
+                    }
+                    break;
+                case 3:
+                    inventaris.cetakDaftarBarang();
+                    break;
+                case 4:
+                    System.out.println("Keluar dari program.");
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid.");
+            }
+        } while (pilihan != 4);
     }
 }
