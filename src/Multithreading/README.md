@@ -1,57 +1,57 @@
-# Multithreading in Java
+# Multithreading dalam Java
 
-## Introduction to Multithreading
+## Pengenalan tentang Multithreading
 
-Multithreading is a concept in Java that allows concurrent execution of multiple threads within the same process. Each thread represents a separate flow of control, enabling programs to perform multiple tasks simultaneously. In Java, multithreading is achieved by extending the `Thread` class or implementing the `Runnable` interface.
+Multithreading merupakan konsep dalam Java yang memungkinkan eksekusi bersamaan dari beberapa thread dalam satu proses. Setiap thread mewakili aliran kontrol terpisah, memungkinkan program untuk melakukan beberapa tugas secara simultan. Dalam Java, multithreading dapat dicapai dengan cara memperluas kelas `Thread` atau mengimplementasikan antarmuka `Runnable`.
 
-### Basic Concepts
+### Konsep Dasar
 
-1. **Thread**: A thread is the smallest unit of execution within a process. Java provides built-in support for threads via the `Thread` class.
+1. **Thread**: Thread merupakan unit eksekusi terkecil dalam sebuah proses. Java menyediakan dukungan bawaan untuk thread melalui kelas `Thread`.
 
-2. **Runnable Interface**: The `Runnable` interface is used to create a thread. It requires implementing a single method, `run()`, which contains the code to be executed by the thread.
+2. **Runnable Interface**: Antarmuka `Runnable` digunakan untuk membuat sebuah thread. Antarmuka ini memerlukan implementasi sebuah metode, `run()`, yang berisi kode yang akan dieksekusi oleh thread.
 
-3. **Thread States**: Threads in Java can be in one of the following states:
-   - **New**: When a thread is created but not yet started.
-   - **Runnable**: When a thread is ready to run and waiting for its turn to be picked for execution by the CPU.
-   - **Blocked/Waiting**: When a thread is temporarily inactive because it's waiting for an external event such as I/O operation or lock acquisition.
-   - **Timed Waiting**: Similar to Blocked state but with a timeout.
-   - **Terminated**: When a thread has completed execution or terminated due to an exception.
+3. **Status Thread**: Thread dalam Java dapat berada dalam salah satu dari status berikut:
+   - **Baru (New)**: Saat thread dibuat namun belum dimulai.
+   - **Runnable**: Saat thread siap untuk dieksekusi dan menunggu giliran untuk dipilih untuk dieksekusi oleh CPU.
+   - **Blokir/Menunggu (Blocked/Waiting)**: Saat thread sementara tidak aktif karena sedang menunggu peristiwa eksternal seperti operasi I/O atau akuisisi kunci.
+   - **Menunggu dengan Waktu Tertentu (Timed Waiting)**: Serupa dengan status Blokir namun dengan waktu habis.
+   - **Terminasi (Terminated)**: Saat thread telah menyelesaikan eksekusi atau berakhir karena sebuah pengecualian.
 
-### Creating Threads
+### Membuat Thread
 
-#### Extending `Thread` Class
+#### Memperluas Kelas `Thread`
 
 ```java
 class MyThread extends Thread {
     public void run() {
-        // Thread code
+        // Kode thread
     }
 }
 
-// Creating and starting the thread
+// Membuat dan memulai thread
 MyThread thread = new MyThread();
 thread.start();
 ```
 
-#### Implementing `Runnable` Interface
+#### Mengimplementasikan Antarmuka `Runnable`
 
 ```java
 class MyRunnable implements Runnable {
     public void run() {
-        // Thread code
+        // Kode thread
     }
 }
 
-// Creating a thread using Runnable interface
+// Membuat thread menggunakan antarmuka Runnable
 Thread thread = new Thread(new MyRunnable());
 thread.start();
 ```
 
-### Thread Synchronization
+### Sinkronisasi Thread
 
-When multiple threads access shared resources concurrently, it can lead to data inconsistency or corruption. Thread synchronization ensures that only one thread can access the shared resource at a time, preventing data races and maintaining data integrity. Java provides several mechanisms for thread synchronization, such as synchronized methods, synchronized blocks, and locks.
+Ketika beberapa thread mengakses sumber daya bersama secara bersamaan, hal ini dapat menyebabkan inkonsistensi atau kerusakan data. Sinkronisasi thread memastikan bahwa hanya satu thread yang dapat mengakses sumber daya bersama pada satu waktu, mencegah persaingan data dan menjaga integritas data. Java menyediakan beberapa mekanisme untuk sinkronisasi thread, seperti metode bersinkronisasi, blok bersinkronisasi, dan kunci (locks).
 
-#### Synchronized Method
+#### Metode Bersinkronisasi
 
 ```java
 class Counter {
@@ -67,7 +67,7 @@ class Counter {
 }
 ```
 
-#### Synchronized Block
+#### Blok Bersinkronisasi
 
 ```java
 class Counter {
@@ -87,11 +87,11 @@ class Counter {
 }
 ```
 
-### Thread Communication
+### Komunikasi Thread
 
-Thread communication allows threads to coordinate their activities and share data. Java provides mechanisms such as wait(), notify(), and notifyAll() methods for thread communication.
+Komunikasi thread memungkinkan thread untuk mengkoordinasikan aktivitas mereka dan berbagi data. Java menyediakan mekanisme seperti metode wait(), notify(), dan notifyAll() untuk komunikasi thread.
 
-#### Using wait() and notify()
+#### Menggunakan wait() dan notify()
 
 ```java
 class SharedResource {
@@ -100,36 +100,36 @@ class SharedResource {
     public synchronized void produce() {
         while (flag) {
             try {
-                wait(); // Wait until consumer consumes
+                wait(); // Menunggu sampai konsumen mengonsumsi
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        // Produce the resource
+        // Memproduksi sumber daya
         flag = true;
-        notify(); // Notify consumer
+        notify(); // Memberi tahu konsumen
     }
 
     public synchronized void consume() {
         while (!flag) {
             try {
-                wait(); // Wait until producer produces
+                wait(); // Menunggu sampai produsen memproduksi
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        // Consume the resource
+        // Mengonsumsi sumber daya
         flag = false;
-        notify(); // Notify producer
+        notify(); // Memberi tahu produsen
     }
 }
 ```
 
-### Thread Pooling
+### Pengelolaan Thread Pool
 
-Thread pooling is a technique where a group of threads are created and managed by a thread pool manager. Instead of creating a new thread for every task, threads from the pool are used, which improves performance and reduces overhead.
+Thread pooling adalah teknik di mana sekelompok thread dibuat dan dikelola oleh pengelolaan thread pool. Daripada membuat thread baru untuk setiap tugas, thread dari pool digunakan, yang meningkatkan kinerja dan mengurangi overhead.
 
-#### Using ExecutorService
+#### Menggunakan ExecutorService
 
 ```java
 import java.util.concurrent.ExecutorService;
@@ -137,25 +137,25 @@ import java.util.concurrent.Executors;
 
 class MyTask implements Runnable {
     public void run() {
-        // Task code
+        // Kode tugas
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        ExecutorService executor = Executors.newFixedThreadPool(5); // Create a thread pool with 5 threads
+        ExecutorService executor = Executors.newFixedThreadPool(5); // Membuat pool thread dengan 5 thread
         for (int i = 0; i < 10; i++) {
-            executor.submit(new MyTask()); // Submit tasks to the pool
+            executor.submit(new MyTask()); // Menyerahkan tugas ke pool
         }
-        executor.shutdown(); // Shutdown the executor
+        executor.shutdown(); // Mematikan executor
     }
 }
 ```
 
-### Thread Safety
+### Keamanan Thread
 
-Thread safety is the property of a program that ensures correct behavior when executed concurrently by multiple threads. Techniques such as synchronization, atomic variables, and thread-safe data structures are used to achieve thread safety.
+Keamanan thread adalah properti dari sebuah program yang memastikan perilaku yang benar ketika dieksekusi secara bersamaan oleh beberapa thread. Teknik seperti sinkronisasi, variabel atomik, dan struktur data yang aman dari thread digunakan untuk mencapai keamanan thread.
 
-### Conclusion
+### Kesimpulan
 
-Multithreading in Java enables efficient utilization of resources and improves program performance by executing multiple tasks concurrently. However, it also introduces challenges such as thread synchronization and thread safety, which need to be carefully managed to ensure correct program behavior. With proper understanding and implementation of multithreading concepts, developers can build robust and scalable Java applications.
+Multithreading dalam Java memungkinkan pemanfaatan sumber daya yang efisien dan meningkatkan kinerja program dengan mengeksekusi beberapa tugas secara bersamaan. Namun, hal ini juga memperkenalkan tantangan seperti sinkronisasi thread dan keamanan thread, yang perlu dikelola dengan hati-hati untuk memastikan perilaku program yang benar. Dengan pemahaman dan implementasi yang tepat tentang konsep multithreading, pengembang dapat membangun aplikasi Java yang tangguh dan skalabel.
