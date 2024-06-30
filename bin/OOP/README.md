@@ -61,4 +61,4 @@ public class Main {
 
 ## **Kesimpulan**
 
-Java adalah bahasa pemrograman yang kuat untuk pengembangan aplikasi berbasis OOP. Dengan konsep-konsep dasar seperti kelas, objek, enkapsulasi, pewarisan, dan polimorfisme, Anda dapat membuat kode yang mudah dipahami, dapat dipelihara, dan dapat digunakan kembali. Dengan memahami prinsip OOP, Anda dapat mengembangkan aplikasi yang lebih efisien dan skalabel dalam Java.
+Java adalah bahasa pemrograman yang kuat untuk pengembangan aplikasi berbasis OOP. Dengan konsep-konsep dasar seperti kelas, objek, enkapsulasi, pewarisan, dan polimorfisme, kamu dapat membuat kode yang mudah dipahami, dapat dipelihara, dan dapat digunakan kembali. Dengan memahami prinsip OOP, kamu dapat mengembangkan aplikasi yang lebih efisien dan skalabel dalam Java.
