@@ -3,7 +3,7 @@ package Arrays;
 public class ArrayNumbersWords {
   public static void main(String[] args) {
     int[] numbers = { 23, 45, 65, 45, 34 };
-    String[] words = { "halo", "kamu", "lagi", "apa", "kabar" };
+    String[] words = { "halo", "kamu", "lagi", "apa?","apa", "kabar" };
 
     System.out.println("The numbers are:");
     for (int n : numbers) {
