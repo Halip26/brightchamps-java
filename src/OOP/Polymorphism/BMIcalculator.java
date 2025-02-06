@@ -7,15 +7,6 @@ class calculateBMI {
   public double calculateBMIinCm(double weight, double height) {
     return weight / ((height / 100) * (height / 100));
   }
-
-  // Method overloading to calculate BMI for weight in pounds and height in inches
-  public double WeightHeight(double weightPounds, double heightInches) {
-    final double KILOGRAMS_PER_POUND = 0.45359237;
-    final double METERS_PER_INCH = 0.0254;
-    double weightKg = weightPounds * KILOGRAMS_PER_POUND;
-    double heightM = heightInches * METERS_PER_INCH;
-    return weightKg / (heightM * heightM);
-  }
 }
 
 public class BMIcalculator {
