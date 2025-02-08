@@ -9,11 +9,15 @@ public class lengthOfWord {
 
     int max_len = 0, len = 0;
     String w = "", max_word = "";
+
     scan = new Scanner(System.in);
+
     System.out.print("Enter Strings here: ");
     String st = scan.nextLine();
+
     st = st.trim();
     st = st + ' ';
+
     for (int i = 0; i < st.length(); i++) {
       char x = st.charAt(i);
       if (x != ' ')
