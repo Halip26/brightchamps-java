@@ -5,6 +5,6 @@
   "editor.tabSize": 2,
   "editor.fontSize": 15,
   "java.project.referencedLibraries": ["lib/**/*.jar"],
-  "workbench.colorTheme": "Dracula Theme",
+  "workbench.colorTheme": "GitHub Dark Default",
   "editor.fontFamily": "Fira Code Retina"
 }
